@@ -10,11 +10,13 @@ This testing framework is a WIP, built using [Playwright](https://playwright.dev
 
 ## 🏹 - Getting Started
 
-- Will be Updated
+- Clone this repo to your local machine
+- Type in your terminal: `yarn install`
 
 ## ⚡ - Running Tests
 
-- Will be Updated
+Type the following in your terminal 🖥️ :
+ * `yarn playwright test {Path to file} --headed` : Runs an individual test in UI.  _i.e. `yarn playwright test sandboxHoverTest.spec.js --headed`_ 
 
 ## ✍🏽 - Writing Tests
 

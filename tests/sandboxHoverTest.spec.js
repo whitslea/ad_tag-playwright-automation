@@ -1,7 +1,5 @@
 const { test, expect, request } = require('@playwright/test');
-const cypress = require('cypress');
 const { kargoLink, hoverAdLink, hoverDemoAdLink } = require('../Ads Info/Ads Links');
-const { getTrackerUrl } = require('../helper/trackersWaitHelper');
 
 test.describe('Sandbox Hover Ad Page', () => {
     test('Check and Click on Kargo Logo', async ({ context }) => {
