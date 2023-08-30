@@ -10,11 +10,9 @@ test.describe('Sandbox Hover Ad Page', () => {
        await page.goto(hoverDemoAdLink);
        await expect(page).toHaveURL(hoverDemoAdLink);
 
-       // Verifying Kargo logo section 
-       await expect(page.locator('a.kargo-hover-link.filled .kargo-svg-bolt')).toBeVisible(); // check that kargo bolt logo is visible
-       await expect(page.locator('a.kargo-hover-link.filled .kargo-svg-kargo')).toBeVisible(); // check that kargo logo is visible
-       await expect(page.locator('a.kargo-hover-link.filled .kargo-svg-ad')).toBeVisible(); // check that AD logo is visible
-       await page.locator('a.kargo-hover-link.filled').click();
+      // Verifying Kargo logo section 
+      await expect(page.locator('a.kargo-hover-link.filled .kargo-svg-kargo-short')).toBeVisible(); // check that kargo bolt logo is visible
+      await page.locator('a.kargo-hover-link.filled').click();
       
        // Chech the new open kargo page
       const newPage = await pagePromise;
