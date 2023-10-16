@@ -11,7 +11,7 @@ test.describe('Sandbox Anchor Ad Page', () => {
        await expect(page).toHaveURL(anchorDemoAdLink);
 
       // Verifying Kargo logo section 
-      await expect(page.locator('a.kargo-hover-link.filled .kargo-svg-kargo-short')).toBeVisible(); // check that kargo bolt logo is visible
+      await expect(page.locator('a.kargo-hover-link.filled .by-kargo-svg-white')).toBeVisible(); // check that kargo bolt logo is visible
       await page.locator('a.kargo-hover-link.filled').click();
       
        // Chech the new open kargo page
