@@ -5,3 +5,5 @@ export const anchorDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag
 export const anchorAdLink = 'https://track.celtra.com/';
 export const breakoutDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakout-v7';
 export const breakoutAdLink = /www.hersheyland.com/;
+export const breakawayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakaway-v7';
+export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige/';
