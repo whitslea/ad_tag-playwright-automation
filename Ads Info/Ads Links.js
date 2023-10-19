@@ -9,3 +9,5 @@ export const breakawayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-
 export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige/';
 export const sidekickDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=sidekick-v7';
 export const sidekickAdLink = 'https://www.pathtosuccess.global/';
+export const middleBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=middle-banner-v7';
+export const middleBannerAdLink = 'https://www.georgeforemancooking.com/?https://www.georgeforemancooking.com';
