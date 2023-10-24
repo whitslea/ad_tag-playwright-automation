@@ -11,3 +11,5 @@ export const sidekickDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-t
 export const sidekickAdLink = 'https://www.pathtosuccess.global/';
 export const middleBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=middle-banner-v7';
 export const middleBannerAdLink = 'https://www.georgeforemancooking.com/?https://www.georgeforemancooking.com';
+export const bottomBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=bottombanner-v7';
+export const bottomBannerAdLink = 'https://www.kargo.com/';
