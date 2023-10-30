@@ -13,3 +13,7 @@ export const middleBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/
 export const middleBannerAdLink = 'https://www.georgeforemancooking.com/?https://www.georgeforemancooking.com';
 export const bottomBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=bottombanner-v7';
 export const bottomBannerAdLink = 'https://www.kargo.com/';
+export const ventiDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=kargo-created';
+export const ventiAdLink = 'https://www.flaminhotfilm.com/?utm_source=Searchlight&utm_medium=Kargo&utm_campaign=FlaminHot';
+export const keyArtDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=keyart-v7';
+export const keyArtAdLink = 'https://www.flaminhotfilm.com/?utm_source=Searchlight&utm_medium=Kargo&utm_campaign=FlaminHot';
