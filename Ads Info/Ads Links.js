@@ -17,3 +17,7 @@ export const ventiDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-
 export const ventiAdLink = 'https://www.flaminhotfilm.com/?utm_source=Searchlight&utm_medium=Kargo&utm_campaign=FlaminHot';
 export const keyArtDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=keyart-v7';
 export const keyArtAdLink = 'https://www.flaminhotfilm.com/?utm_source=Searchlight&utm_medium=Kargo&utm_campaign=FlaminHot';
+export const highRiseDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=highrise-v7&krg_debug=4';
+export const highRiseAdLink = 'https://frog.com/';
+export const wrapperDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=wrapper-v7&krg_debug=4';
+export const wrapperAdLink = 'https://www.kargo.com/';
