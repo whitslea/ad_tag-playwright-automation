@@ -21,3 +21,7 @@ export const highRiseDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-t
 export const highRiseAdLink = 'https://frog.com/';
 export const wrapperDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=wrapper-v7&krg_debug=4';
 export const wrapperAdLink = 'https://www.kargo.com/';
+export const swipeUpDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=swipeup-v7&krg_debug=4';
+export const swipeUpAdLink = 'https://www.kargo.com/';
+export const abaDisplayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com//ad-tag-test/render.php?krg_debug=4&id=aba-display-v7';
+export const abaDisplayAdLink = 'https://www.kargo.com/';
