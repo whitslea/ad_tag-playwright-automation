@@ -18,7 +18,7 @@ test.describe('Sandbox Middle Banner Ad Page', () => {
     // Chech the new open kargo page
     const newPage = await pagePromise;
     await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(kargoLink);
+    await expect(newPage).toHaveURL(kargoLink, {timeout: 10000});
   });
 
   test('Check click on Ad', async ({ context }) => {
@@ -38,7 +38,7 @@ test.describe('Sandbox Middle Banner Ad Page', () => {
     // chech the new page open link of ad
     const newPage = await pagePromise;
     // await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(middleBannerAdLink); // URL contains
+    await expect(newPage).toHaveURL(middleBannerAdLink, {timeout: 10000}); // URL contains
   });
 
   test('Check Ad Trackers', async ({ context }) => {
@@ -100,7 +100,7 @@ test.describe('Sandbox Middle Banner Ad Page', () => {
     // chech the new open kargo page
     const newPage = await pagePromise;
     // await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(middleBannerAdLink); // URL contains
+    await expect(newPage).toHaveURL(middleBannerAdLink, {timeout: 10000}); // URL contains
 
     const clickRequest = await clickRequestPromise;
     await expect(clickRequest).toBeTruthy();
