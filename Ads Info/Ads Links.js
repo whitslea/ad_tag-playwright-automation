@@ -47,3 +47,9 @@ export const desktopBreakoutAdvertisementDemoAdLink = 'https://ad-tag-sandbox.st
 export const desktopBreakoutAdvertisementAdLink = 'https://track.celtra.com/';
 export const desktopRunwayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=desktop-runway';
 export const desktopRunwayAdLink = 'https://www.kargo.com/';
+export const outstreamVPAIDDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=outstream-video-v7';
+export const outstreamVPAIDAdLink = 'https://www.kargo.com/';
+export const outstreamKAPDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=outstream-video-kap-v7&krg_debug=4';
+export const outstreamKAPAdLink = 'https://www.kargo.com/';
+export const videoAnchorDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=KAT-5331-Video%20Anchor%20Vast&krg_debug=4';
+export const videoAnchorAdLink = /www.viega.us/;
