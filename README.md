@@ -17,7 +17,7 @@ This testing framework is a WIP, built using [Playwright](https://playwright.dev
 
 Type the following in your terminal 🖥️ :
  * `yarn playwright test {Path to file} --headed` : Runs an individual test in UI.  _i.e. `yarn playwright test sandboxHoverTest.spec.js --headed`_ 
- * `yarn test` : Runs all tests headless with 3 retires for each Tescase.
+ * `yarn test` : Runs all tests headless with 3 retries for each Test case.
 
 ## ✍🏽 - Writing Tests
 
