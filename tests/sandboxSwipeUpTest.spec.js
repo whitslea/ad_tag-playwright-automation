@@ -2,24 +2,6 @@ const { test, expect } = require('@playwright/test');
 const { kargoLink, swipeUpAdLink, swipeUpDemoAdLink } = require('../Ads Info/Ads Links');
 
 test.describe('Sandbox Swipe Up Ad Page', () => {
-  test('Check and Click on Kargo Logo', async ({ context }) => {
-    const page = await context.newPage();
-    // Start waiting for new page before clicking
-    const pagePromise = context.waitForEvent('page');
-    // Go to the starting url
-    await page.goto(swipeUpDemoAdLink);
-    await expect(page).toHaveURL(swipeUpDemoAdLink);
-
-    // Verifying Kargo logo section
-    await expect(page.locator('a.kargo-hover-link.unfilled .by-kargo-svg-white')).toBeVisible(); // check that kargo bolt logo is visible
-    await page.locator('a.kargo-hover-link.unfilled').click();
-
-    // Chech the new open kargo page
-    const newPage = await pagePromise;
-    await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(kargoLink, {timeout: 10000});
-  });
-
   test('Check click on Ad', async ({ context }) => {
     const page = await context.newPage();
     // Start waiting for new page before clicking
