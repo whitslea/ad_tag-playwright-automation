@@ -6,7 +6,7 @@ export const anchorAdLink = 'https://track.celtra.com/';
 export const breakoutDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakout-v7';
 export const breakoutAdLink = /www.hersheyland.com/;
 export const breakawayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakaway-v7';
-export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige/';
+export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige';
 export const sidekickDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=sidekick-v7';
 export const sidekickAdLink = 'https://www.pathtosuccess.global/';
 export const middleBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=middle-banner-v7';

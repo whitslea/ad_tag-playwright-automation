@@ -54,7 +54,7 @@ test.describe('Sandbox Desktop Hover Advertisement Branding Ad Page', () => {
     const viewCompleteRequestPromise = page.waitForResponse(request => request.url().match('imp_track-completeview'));
     const viewRequestPromise = page.waitForResponse(request => request.url().match('imp_track-view'));
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
-    const krakenBillableRequestPromise = page.waitForResponse(request => request.url().match('event/billable'));
+    const krakenBillableRequestPromise = page.waitForRequest(request => request.url().match('event/billable'));
     const clickRequestPromise = page.waitForResponse(request => request.url().match('imp_track-click'));
     const closeRequestPromise = page.waitForResponse(request => request.url().match('imp_track-close'));
 

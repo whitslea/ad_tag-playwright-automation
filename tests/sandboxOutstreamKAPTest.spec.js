@@ -68,7 +68,7 @@ test.describe('Sandbox Outstream Video KAP Ad Page', () => {
     const q2VideoRequestPromise = page.waitForResponse(request => request.url().match('video-q2'));
     const q3VideoRequestPromise = page.waitForResponse(request => request.url().match('video-q3'));
     const videoCompleteRequestPromise = page.waitForResponse(request => request.url().match('video-complete'));
-    const krakenBillableRequestPromise = page.waitForResponse(request => request.url().match('event/billable'));
+    const krakenBillableRequestPromise = page.waitForRequest(request => request.url().match('event/billable'));
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
     const muteRequestPromise = page.waitForResponse(request => request.url().match('https://tk.kargo.com/t/mute'));
     const unmuteRequestPromise = page.waitForResponse(request => request.url().match('https://tk.kargo.com/t/unmute'));

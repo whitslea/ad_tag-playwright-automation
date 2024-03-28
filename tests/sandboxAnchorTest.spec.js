@@ -56,7 +56,7 @@ test.describe('Sandbox Anchor Ad Page', () => {
     const viewRequestPromise = page.waitForResponse(request => request.url().match('imp_track-view'));
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
     const clickWebRequestPromise = page.waitForResponse(request => request.url().match('clickUrl=https'));
-    const krakenBillableRequestPromise = page.waitForResponse(request => request.url().match('event/billable'));
+    const krakenBillableRequestPromise = page.waitForRequest(request => request.url().match('event/billable'));
     const clickRequestPromise = page.waitForResponse(request => request.url().match('imp_track-click'));
     const closeRequestPromise = page.waitForResponse(request => request.url().match('imp_track-close'));
     // const moatRequestPromise = page.waitForResponse(request => request.status() === 400);

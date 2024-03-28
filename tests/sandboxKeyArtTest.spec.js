@@ -33,7 +33,7 @@ test.describe('Sandbox Key Art Ad Page', () => {
     const impressionRequestPromise = page.waitForResponse(request => request.url().match('impression'));
     const viewRequestPromise = page.waitForResponse(request => request.url().match('imp_track-view'));
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
-    const krakenBillableRequestPromise = page.waitForResponse(request => request.url().match('event/billable'));
+    const krakenBillableRequestPromise = page.waitForRequest(request => request.url().match('event/billable'));
 
     // Go to the starting url
     await page.goto(keyArtDemoAdLink);

@@ -58,7 +58,7 @@ test.describe('Sandbox Billboard Ad Page', () => {
     const viewRequestPromise = page.waitForResponse(request => request.url().match('imp_track-view'));
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
     const clickWebRequestPromise = page.waitForResponse(request => request.url().match('clickUrl=https'));
-    const krakenBillableRequestPromise = page.waitForResponse(request => request.url().match('event/billable'));
+    const krakenBillableRequestPromise = page.waitForRequest(request => request.url().match('event/billable'));
     const clickRequestPromise = page.waitForResponse(request => request.url().match('imp_track-click'));
 
     // Go to the starting url
