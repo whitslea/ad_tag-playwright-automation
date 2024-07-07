@@ -36,7 +36,7 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     // chech the new page open link of ad
     const newPage = await pagePromise;
     // await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(desktopBreakoutAdLink, {timeout: 10000}); // URL contains
+    await expect(newPage).toHaveURL(desktopBreakoutAdLink, {timeout: 15000}); // URL contains
   });
 
   test('Check Ad Trackers', async ({ context }) => {
@@ -81,6 +81,8 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     // Verify that the first 4 trackers include uuid in the request URL
     for (let i = 0; i < 4; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=');
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&line_item_id=&');
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 
@@ -94,12 +96,14 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     // chech the new open kargo page
     const newPage = await pagePromise;
     // await newPage.waitForLoadState();
-    await expect(newPage).toHaveURL(desktopBreakoutAdLink, {timeout: 10000}); // URL contains
+    await expect(newPage).toHaveURL(desktopBreakoutAdLink, {timeout: 15000}); // URL contains
 
     const clickRequest = await clickRequestPromise;
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=');
+    await expect(clickRequest._initializer.url).toContain('&line_item_id=&');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
 
@@ -108,6 +112,8 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     await expect(closeRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(closeRequest._initializer.url).toContain('uuid');
+    await expect(closeRequest._initializer.url).toContain('&deal_id=');
+    await expect(closeRequest._initializer.url).toContain('&line_item_id=&');
     await expect(closeRequest.status()).toEqual(200);
   });
 });

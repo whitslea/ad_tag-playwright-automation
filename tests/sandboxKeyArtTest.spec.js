@@ -61,6 +61,7 @@ test.describe('Sandbox Key Art Ad Page', () => {
     for (let i = 0; i < 6; i++) {
       if (waitTrackersArray[i]._initializer.url.match('imp_track')) {
         await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+        await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=&line_item_id=');
         console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
       }
     }

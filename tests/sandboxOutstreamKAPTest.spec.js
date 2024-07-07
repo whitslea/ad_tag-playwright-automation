@@ -46,6 +46,8 @@ test.describe('Sandbox Outstream Video KAP Ad Page', () => {
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=');
+    await expect(clickRequest._initializer.url).toContain('&line_item_id=&');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
   });
@@ -104,6 +106,10 @@ test.describe('Sandbox Outstream Video KAP Ad Page', () => {
     // Verify that the first 11 trackers include uuid in the request URL
     for (let i = 0; i < 11; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      if (waitTrackersArray[i]._initializer.url.match('imp_track')) {
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=');
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&line_item_id=&');
+      }
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 

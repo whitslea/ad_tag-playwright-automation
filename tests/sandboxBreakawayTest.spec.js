@@ -85,6 +85,9 @@ test.describe('Sandbox Breakaway Ad Page', () => {
     // Verify that the first 5 trackers include uuid in the request URL
     for (let i = 0; i < 5; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      if (waitTrackersArray[i]._initializer.url.match('imp_track')) {
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=&line_item_id=&');
+      }
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 
@@ -104,6 +107,7 @@ test.describe('Sandbox Breakaway Ad Page', () => {
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=&line_item_id=&');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
 
@@ -112,6 +116,7 @@ test.describe('Sandbox Breakaway Ad Page', () => {
     await expect(closeRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(closeRequest._initializer.url).toContain('uuid');
+    await expect(closeRequest._initializer.url).toContain('&deal_id=&line_item_id=&');
     await expect(closeRequest.status()).toEqual(200);
   });
 });

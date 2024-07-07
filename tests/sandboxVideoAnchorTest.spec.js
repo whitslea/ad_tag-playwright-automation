@@ -47,6 +47,7 @@ test.describe('Sandbox Video Anchor Ad Page', () => {
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=&line_item_id=');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
   });
@@ -106,6 +107,9 @@ test.describe('Sandbox Video Anchor Ad Page', () => {
     // Verify that the first 11 trackers include uuid in the request URL
     for (let i = 0; i < 11; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      if (waitTrackersArray[i]._initializer.url.match('imp_track')) {
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=&line_item_id=');
+      }
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 
@@ -124,11 +128,11 @@ test.describe('Sandbox Video Anchor Ad Page', () => {
     console.log('Replay Response URL: ',replayRequest._initializer.url);
 
     await adFrame.frameLocator('iframe').last().locator('.kargo-frame .kargo-canvas div:nth-child(5)').last().click(); // Click on mute
-    const nuteRequest = await muteRequestPromise;
-    await expect(nuteRequest).toBeTruthy();
+    const muteRequest = await muteRequestPromise;
+    await expect(muteRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
-    await expect(nuteRequest._initializer.url).toContain('uuid');
-    await expect(nuteRequest.status()).toEqual(200);
-    console.log('Mute Response URL: ',nuteRequest._initializer.url);
+    await expect(muteRequest._initializer.url).toContain('uuid');
+    await expect(muteRequest.status()).toEqual(200);
+    console.log('Mute Response URL: ', muteRequest._initializer.url);
   });
 });

@@ -83,6 +83,7 @@ test.describe('Sandbox ABA Display Ad Page', () => {
     // Verify that the first 4 trackers include uuid in the request URL
     for (let i = 0; i < 4; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=&line_item_id=&');
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 
@@ -102,6 +103,7 @@ test.describe('Sandbox ABA Display Ad Page', () => {
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=&line_item_id=&');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
   });

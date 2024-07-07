@@ -46,6 +46,7 @@ test.describe('Sandbox ABA Video Ad Page', () => {
     await expect(clickRequest).toBeTruthy();
     // check tracker url includes uuid & response status is 200
     await expect(clickRequest._initializer.url).toContain('uuid');
+    await expect(clickRequest._initializer.url).toContain('&deal_id=&line_item_id=&');
     await expect(clickRequest.status()).toEqual(200);
     await newPage.close();
   });
@@ -71,7 +72,7 @@ test.describe('Sandbox ABA Video Ad Page', () => {
     const cacheBusterRequestPromise = page.waitForResponse(request => request.url().match('%%CACHEBUSTER%%'));
     const replayRequestPromise = page.waitForResponse(request => request.url().match('replay'));
     const muteRequestPromise = page.waitForResponse(request => request.url().match('https://tk.kargo.com/t/video-mute?'));
-    const unmuteRequestPromise = page.waitForResponse(request => request.url().match('https://tk.kargo.com/t/video-mute?'));
+    const unmuteRequestPromise = page.waitForResponse(request => request.url().match('https://tk.kargo.com/t/video-unmute?'));
 
     // Go to the starting url
     await page.goto(abaVideoDemoAdLink);
@@ -103,6 +104,9 @@ test.describe('Sandbox ABA Video Ad Page', () => {
     // Verify that the first 10 trackers include uuid in the request URL
     for (let i = 0; i < 10; i++) {
       await expect(waitTrackersArray[i]._initializer.url).toContain('uuid');
+      if (waitTrackersArray[i]._initializer.url.match('imp_track')) {
+      await expect(waitTrackersArray[i]._initializer.url).toContain('&deal_id=&line_item_id=&');
+      }
       console.log('Tracker URL: ', waitTrackersArray[i]._initializer.url);
     }
 
