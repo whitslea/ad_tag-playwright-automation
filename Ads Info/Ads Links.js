@@ -9,7 +9,7 @@ export const anchorAdLink = 'https://track.celtra.com/';
 export const anchorDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=anchor-v7';
 export const billboardAdLink = 'https://tv.apple.com/us/movie/selena-gomez-my-mind--me';
 export const billboardDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=billboard-v7';
-export const bottomBannerAdLink = 'https://www.kargo.com/';
+export const bottomBannerAdLink = /www.kargo.com/;
 export const bottomBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=bottombanner-v7';
 export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige';
 export const breakawayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakaway-v7';
