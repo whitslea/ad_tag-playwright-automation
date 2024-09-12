@@ -11,7 +11,7 @@ export const billboardAdLink = 'https://tv.apple.com/us/movie/selena-gomez-my-mi
 export const billboardDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=billboard-v7';
 export const bottomBannerAdLink = /www.kargo.com/;
 export const bottomBannerDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=bottombanner-v7';
-export const breakawayAdLink = 'https://www.mummnapa.com/wine/brut-prestige';
+export const breakawayAdLink = 'https://www.mummnapa.com/wines/release/brut-prestige';
 export const breakawayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakaway-v7';
 export const breakoutAdLink = /www.hersheyland.com/;
 export const breakoutDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=breakout-v7';
@@ -25,7 +25,7 @@ export const desktopHoverAdLink = 'https://www.unilever.com/brands/';
 export const desktopHoverDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=desktop-hover-v7';
 export const desktopRunwayAdLink = 'https://www.kargo.com/';
 export const desktopRunwayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=desktop-runway';
-export const halfpageAdLink = 'https://www.thinkinghuts.org/donate';
+export const halfpageAdLink = 'https://www.thinkinghuts.org/family';
 export const halfpageDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=halfpage-v7';
 export const highRiseAdLink = 'https://frog.com/';
 export const highRiseDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=highrise-v7&krg_debug=4';
