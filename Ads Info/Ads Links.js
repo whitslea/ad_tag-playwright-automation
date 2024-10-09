@@ -25,7 +25,7 @@ export const desktopHoverAdLink = 'https://www.unilever.com/brands/';
 export const desktopHoverDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=desktop-hover-v7';
 export const desktopRunwayAdLink = 'https://www.kargo.com/';
 export const desktopRunwayDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=desktop-runway';
-export const halfpageAdLink = 'https://www.thinkinghuts.org/family';
+export const halfpageAdLink = /stake.com/;
 export const halfpageDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?krg_debug=4&id=halfpage-v7';
 export const highRiseAdLink = 'https://frog.com/';
 export const highRiseDemoAdLink = 'https://ad-tag-sandbox.staging.kargo.com/ad-tag-test/render.php?&id=highrise-v7&krg_debug=4';

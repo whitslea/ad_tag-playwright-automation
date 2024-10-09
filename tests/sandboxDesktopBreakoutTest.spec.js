@@ -29,7 +29,7 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     await expect(page).toHaveURL(desktopBreakoutDemoAdLink);
 
     // Selecting Ad & click on it
-    const adFrame = await page.frameLocator('iframe[allowfullscreen]'); // Defining the ad frame
+    const adFrame = await page.frameLocator('.kargo-creative'); // Defining the ad frame
     await expect(page.locator('.kargo-ad-content')).toBeVisible(); // Check that ad is visible
     await page.locator('.kargo-ad-content').click(); // Click on ad
 
@@ -63,7 +63,7 @@ test.describe('Sandbox Desktop Breakout Ad Page', () => {
     await expect(page).toHaveURL(desktopBreakoutDemoAdLink);
 
     // Selecting Ad & click on it
-    const adFrame = await page.frameLocator('iframe[allowfullscreen]'); // Defining the ad frame
+    const adFrame = await page.frameLocator('.kargo-creative'); // Defining the ad frame
     await expect(page.locator('.kargo-ad-content')).toBeVisible(); // Check that ad is visible
 
     // wait for trackers

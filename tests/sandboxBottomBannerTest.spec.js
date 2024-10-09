@@ -31,9 +31,9 @@ test.describe('Sandbox Bottom Banner Ad Page', () => {
 
     // Selecting Ad & click on it
     await page.locator('#kargo-ad-bottom').scrollIntoViewIfNeeded();
-    const adFrame = await page.frameLocator('iframe[allowfullscreen]'); // Defining the ad frame
-    await expect(adFrame.locator('.celtra-screen-holder').last()).toBeVisible(); // Check that ad is visible
-    await page.locator('.celtra-ad-inline-host').click(); // Click on ad
+    const adFrame = await page.frameLocator('.kargo-creative'); // Defining the ad frame
+    await expect(page.locator('.kargo-ad-content')).toBeVisible(); // Check that ad is visible
+    await page.locator('.kargo-ad-content').click(); // Click on ad
 
     // chech the new page open link of ad
     const newPage = await pagePromise;
@@ -67,8 +67,8 @@ test.describe('Sandbox Bottom Banner Ad Page', () => {
 
     // Selecting Ad & click on it
     await page.locator('#kargo-ad-bottom').scrollIntoViewIfNeeded();
-    const adFrame = await page.frameLocator('iframe[allowfullscreen]'); // Defining the ad frame
-    await expect(adFrame.locator('.celtra-screen-holder').last()).toBeVisible(); // Check that ad is visible
+    const adFrame = await page.frameLocator('.kargo-creative'); // Defining the ad frame
+    await expect(page.locator('.kargo-ad-content')).toBeVisible(); // Check that ad is visible
 
     // wait for trackers
     const waitTrackersArray = await Promise.all([
@@ -99,8 +99,9 @@ test.describe('Sandbox Bottom Banner Ad Page', () => {
       await expect(waitTrackersArray[i].status()).toEqual(200);
       console.log('Response URL: ', waitTrackersArray[i]._initializer.url);
     }
+    // Selecting Ad & click on it
+    await page.locator('.kargo-ad-content').click(); // Click on ad
 
-    await page.locator('.celtra-ad-inline-host').click(); // Click on ad
     // chech the new open kargo page
     const newPage = await pagePromise;
     // await newPage.waitForLoadState();
